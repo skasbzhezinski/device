@@ -3,19 +3,223 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Device</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!--<link rel="stylesheet" type="text/css" href="assets/css/hidden_style.css"> 
+		Временно делаю видимыми невидимые блоки-->
 </head>
 <body>
 
-	<header class="header">
+	<header class="main_header">
 		
+		<div class="logo_container"> <!-- Блок для позиционирования логотипа -->	
+			<div class="logo">
+				<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="assets/img/logo.png" width="164" height="36"></a>			
+			</div>
+		</div>
+
+		<nav class="search_nav">
+			
+			<form class="search" method="post">
+				<input type="image" name="submit" src="assets/img/search.png" alt="искать">
+				<input type="search" name="search" placeholder="Поиск по сайту">				
+			</form>
+			
+			<a href="#">Войти</a>
+			<a href="#">Сравнить</a>
+			<a href="#">Корзина</a>
+		</nav>
+
+		<nav class="main_nav">
+			<ul>
+				<li><a href="#">Каталог товаров</a></li>
+				<li><a href="#">Доставка</a></li>
+				<li><a href="#">Гарантия</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+
 	</header>
 
-	<main>
-		
+	<main class="title_content">
+
+		<section class="top_slider">
+
+			<h2>Делай селфи,  как Бен Стиллер! </h2>
+			<p>Самая длинная палка для селфи доступна в нашем магазине. (Восемь, Карл!) метров длиной и 
+				весом всего 5 килограмм.</p>
+			<a class="read_more stylish_button" href="#">Подробнее</a>
+			<table class="specifications">
+				<tr>
+					<td>8,5 м</td>
+					<td>5 кг</td>
+					<td>Карбон</td>
+				</tr>
+				<tr>
+					<th>Длина палки</th>
+					<th>Вес палки</th>
+					<th>Материал</th>					
+				</tr>				
+			</table>
+
+		</section>
+
+		<section class="prodacts">
+
+			<h2 class="visually-hidden">Наша продукция</h2>
+			<ul>
+				<li><a href="#">Виртуальная реальность</a></li>
+				<li><a href="#">Моноподы для селфи</a></li>
+				<li><a href="#">Экшн-камеры</a></li>
+				<li><a href="#">Фитнес-браслеты</a></li>
+				<li><a href="#">Умные часы</a></li>
+				<li><a href="#">Квадрокоптеры</a></li>
+			</ul>
+
+		</section>
+
+		<section class="bottom_slider">
+
+			<h2 class="visually-hidden">Наш сервис</h2>
+			<ul class="services">
+				<li class="services_item stylish_button">Доставка</li>
+				<li class="services_item stylish_button">Гарантия</li>
+				<li class="services_item stylish_button">Кредит</li>
+			</ul>
+
+			<ul class="services_figure">
+				<li class="delivery">
+					<h2>Доставка</h2>
+					<p>
+						Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+					</p>
+				</li>
+				<li class="warranty">
+					<h2>Гарантия</h2>
+					<p>
+						Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+						Товар, не дом, конечно же.
+					</p>
+				</li>
+				<li class="credit">
+					<h2>Кредит</h2>
+					<p>
+						Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
+						условия кредита. Выгодные для нашего банка, разумеется.
+					</p>
+				</li>
+			</ul>
+
+		</section>
+
+		<section class="partners">
+
+			<h2 class="visually-hidden">Наши партнеры</h2>
+			<ul>
+				<li>
+					<a href="https://www.dji.com/" title="компания DJI">
+						<img src="assets/img/logo-dji.png" width="260" height="100">
+					</a>
+				</li>
+				<li>
+					<a href="http://www.sp-gadgets.com/" title="компания SP Gadget">
+						<img src="assets/img/logo-sp_gadgets.png" width="260" height="100">
+					</a>
+				</li>
+				<li>
+					<a href="https://gopro.com/" title="компания Go Pro">
+						<img src="assets/img/logo-go_pro.png" width="260" height="100">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.vive.com/ru/" title="компания VIVE">
+						<img src="assets/img/logo-vive.png" width="260" height="100">
+					</a>
+				</li>
+			</ul>
+
+		</section>
+
+        <section class="about_us">
+        	
+			<h2>О нас</h2>
+			<p>
+				Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+			</p>
+			<p>
+				Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+			</p>
+			<ul>
+				<li><a href="#"><b>Деловые Линии</b></a></li>
+				<li><a href="#"><b>Автотрейдинг</b></a></li>
+				<li><a href="#"><b>ЖелДорЭкспедиция</b></a></li>
+			</ul>
+			<a class="stylish_button" href="#">Подробнее о нас</a>
+
+        </section>
+
+        <section class="contacts">
+        	
+			<h2>Контакты</h2>
+			<p>
+				Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+			</p>
+            <div class="map">
+            	<img src="assets/img/map.jpg">
+            </div>
+            <button class="stylish_button">напишите нам</button>
+
+
+        </section>
+
 	</main>
 
-	<footer>
-		
+	<footer class="main_footer">
+
+		<div class="logo_container"> <!-- Блок для позиционирования логотипа -->	
+			<div class="footer_logo">
+				<a href="https://htmlacademy.ru/intensive/htmlcss">
+					<span class="logo_text">DEVICE</span><!-- <img src="assets/img/logo.png" width="164" height="36"> -->
+				</a>			
+			</div>
+		</div>
+
+		<nav class="search_nav">						
+			<a href="#">Войти</a>
+			<a href="#">Сравнить</a>
+			<a href="#">Корзина</a>
+		</nav>
+
+		<p class="address">г. Москва, ул. Строителей, 15 </p>
+
+		<nav class="main_nav">
+			<ul>
+				<li><a href="#" al>Доставка</a></li>
+				<li><a href="#">Гарантия</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+
+		<p class="address">Тел.: +7 (495) 495-95-95</p>
+
+		<ul class="social_networks">
+			<li>
+				<a href="#" title="facebook">
+					<img src="assets/img/facebook.png" width="32" height="32">
+				</a>
+			</li>
+			<li>
+				<a href="#" title="instagram">
+					<img src="assets/img/instagram.png" width="32" height="32">
+				</a>
+			</li>
+			<li>
+				<a href="#" title="twitter">
+					<img src="assets/img/twitter.png" width="32" height="32">
+				</a>
+			</li>
+			
+		</ul>
+
 	</footer>
 
 </body>
