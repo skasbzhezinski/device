@@ -1,3 +1,58 @@
+/* Позиционирование */
+/* Блочная модель */
+/* Типографика */
+/* Оформление */
+/* Анимация */
+/* Разное */
+
+/* ===== Глобальные стили ===== */
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+/* Обводка в фокусе */
+
+* {
+	outline: none; 
+}
+
+
+/* Стили для Body */
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Open Sans', Light;
+    font-size: 15px;
+    line-height: 30px;
+    color: #000000;
+
+	background-color: #fff;
+}
+
+/* ===== Fonts ===== */
+
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('../fonts/gilroyextrabold-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../fonts/gilroylight-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ===== Header ===== */
+
 .main_header {
 	width: 100%;
 	height: 299px;
@@ -14,7 +69,7 @@
     z-index: 1;
 }
 
-.logo,
+.header_logo,
 .search,
 .search_nav,
 .main_nav,
@@ -26,18 +81,337 @@
     margin-right: auto;
 }
 
-.logo {
+.header_logo {
 	position: absolute;
-	top: -20px;
+	top: -16px; 
 }
 
-.logo:hover 
-
-.social_networks li {
-	background-color: #7e7e7e;
-	width: 32px;
-	height: 32px;
+.header_logo .logo_text {
+	color: #000;
 }
+
+/* Поведение верхнего логотипа */
+
+.header_logo:hover .logo_text {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.header_logo:active .logo_text,
+.header_logo a:focus .logo_text{
+	color: rgba(0, 0, 0, 0.25);
+}
+
+.logo_text {
+	font-family: Gilroy Extrabold;
+	font-size: 48px;
+}
+
+/* Поисковая навигация */
+
+.search_nav a {
+	font-family: Open Sans, Light;
+	font-size: 15px;
+	line-height: 30px;
+	color: #000;
+}
+
+/* прикручиваю иконки к ссылкам */
+.to_enter a::before,
+.compare a::before,
+.cart a::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.to_enter a::before {
+	background-image: url("../img/user.png");
+}
+
+.compare a::before {	
+	background-image: url("../img/compare.png");
+}
+
+.cart a::before {
+	background-image: url("../img/cart.png");
+}
+
+/* поведение */
+
+.search_nav a:hover {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.search_nav a:active,
+.search_nav a:focus {
+	color: rgba(0, 0, 0, 0.25);
+}
+
+.search_nav li:hover a::before {
+	fill: ; /* ??? */										=====?
+}
+
+/* Главная навигация */
+
+.main_nav a {
+	font-family: Gilroy Extrabold;
+	font-size: 24px;
+	line-height: 24px;
+	letter-spacing: 0.2em;
+	color: rgba(0, 0, 0, 1);
+}
+
+/* поведение */
+.main_nav a:hover {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.main_nav a:active,
+.main_nav a:focus {
+	color: rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Main ===== */
+
+/* Слайдер top_slider */
+
+.top_slider .number {
+	font-family: Gilroy Extrabold;
+	font-size: 179.2px;
+	line-height: 179.2px;
+	color: #fff;
+	background-color: #f7e296; /* временно для видимости */
+}
+
+.top_slider h2 {
+	font-family: Gilroy, Extrabold;
+	font-size: 47px;
+	line-height: 56px; 
+}
+
+.top_slider p {
+	width: 480px;
+}
+
+.specifications td {
+	font-family: Gilroy Light;
+	font-size: 36px;
+	line-height: 48px;
+}
+
+.specifications th {
+	font-family: 'Open Sans', Light;
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+.stylish_button {
+	font-family: Gilroy Extrabold;
+	font-size: 24px;
+	line-height: 24px;
+	letter-spacing: 0.2em;
+	color: rgba(0, 0, 0, 1);
+	
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 40px;
+	padding-right: 40px; 
+}
+
+/* переключатель слайдов */
+.slide_toggler li {
+	position: relative;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	margin-right: 22px; 
+}
+
+.slide .active::before {
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	display: block;
+	content: "";
+	width: 6px;
+	height: 6px;
+	border: 1px solid #000;
+	border-radius: 50%;
+}
+
+
+
+/* прикручиваю внутреннюю полоску через псевдо элемент */
+
+/*.top_slider {
+	position: relative;
+}
+
+.stylish_button::after {
+	content: "";
+	display: block;
+	width: 1160px;
+	height: 8px;
+	background-color: #f0c52e;
+	position: absolute;
+}*/
+
+/* вариант с фоновой картинкой: */
+
+
+
+/* поведение */
+
+.stylish_button:hover {
+	background-color: #f0c52e;
+}
+
+.stylish_button:active,
+.stylish_button:focus {
+	background-color: #f0c52e;
+	color: rgba(0, 0, 0, 0.25);
+}
+
+/*.stylish_button::before {
+	content: "";
+	display: block;
+	width: 
+}*/
+
+/* Блок с иконками prodacts */
+ 
+.prodacts ul {
+	padding: 0;
+	margin: 0;
+}
+
+.prodacts a {
+	width: 160px;
+}
+
+.prodacts span {
+	font-family: Gilroy Extrabold;
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 1);
+	height: 240px;
+	width: 160px;
+}
+
+.prodacts .underref {
+	height: 160px;
+	width: inherit;
+	background-color: #f7e296;
+}
+
+.prodacts li:nth-child(1) .underref {
+	background-image: url(../img/popular-1.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.prodacts li:nth-child(2) .underref {
+	background-image: url(../img/popular-2.png);
+	background-repeat: no-repeat;
+	background-position-y: 40px; /* из-за того что дизайнер сцуко выёживается */
+	background-position-x: center;
+}
+
+.prodacts li:nth-child(3) .underref {
+	background-image: url(../img/popular-3.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.prodacts li:nth-child(4) .underref {
+	background-image: url(../img/popular-4.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.prodacts li:nth-child(5) .underref {
+	background-image: url(../img/popular-5.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.prodacts li:nth-child(6) .underref {
+	background-image: url(../img/popular-6.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* поведение ссылок и иконок */
+
+.prodacts a:hover .underref {
+	background-color: #f0c52e;
+}
+
+.prodacts a:active span,
+.prodacts a:focus span {
+	color: rgba(0, 0, 0, 0.25);
+}
+
+.prodacts li:nth-child(1) a:active .underref,
+.prodacts li:nth-child(1) a:focus .underref {
+	background-image: url(../img/popular-1pale.png);
+}
+
+.prodacts li:nth-child(2) a:active .underref,
+.prodacts li:nth-child(2) a:focus .underref {
+	background-image: url(../img/popular-2pale.png);
+}
+
+.prodacts li:nth-child(3) a:active .underref,
+.prodacts li:nth-child(3) a:focus .underref {
+	background-image: url(../img/popular-3pale.png);
+}
+
+.prodacts li:nth-child(4) a:active .underref,
+.prodacts li:nth-child(4) a:focus .underref {
+	background-image: url(../img/popular-4pale.png);
+}
+
+.prodacts li:nth-child(5) a:active .underref,
+.prodacts li:nth-child(5) a:focus .underref {
+	background-image: url(../img/popular-5pale.png);
+}
+
+.prodacts li:nth-child(6) a:active .underref,
+.prodacts li:nth-child(6) a:focus .underref {
+	background-image: url(../img/popular-6pale.png);
+}
+
+.prodacts span:active,
+.prodacts span:focus {
+	color: rgba(0, 0, 0, 0.25);
+}
+
+/* Нижний слайдер */
+
+/* обнуляю дефолтные стили для кнопки */
+.stylish_button {
+	border: none;
+	box-shadow: none;
+	background-color: #fff;
+}
+
+/* ...и для списка */
+.bottom_slider ul {
+	padding: 0;
+	margin: 0;
+}
+
+
+
+/* ===== Footer ===== */
 
 .main_footer {
 	width: 100%;
@@ -45,9 +419,12 @@
 	background-color: #464646;
 }
 
-.logo_text {
-	font-family: Gilroy;
-	font-size: 48px;
-	font-weight: 600;
+.footer_logo .logo_text {
 	color: #ffc600;
+}
+
+.social_networks li {
+	background-color: #7e7e7e;
+	width: 32px;
+	height: 32px;
 }
