@@ -64,7 +64,6 @@ body {
 /* ===== Header ===== */
 
 .main_header {
-	width: 100%;
 	height: 299px;
 	background-color: #f7e296;
 	margin-top: 40px;
@@ -80,12 +79,14 @@ body {
 }
 
 .header_logo,
+.main_header,
 .search,
 .search_nav,
 .main_nav,
 .title_content,
 .address,
-.social_networks {
+.social_networks,
+.bottom_slider {
 	width: 1160px;
     margin-left: auto;
     margin-right: auto;
@@ -403,10 +404,11 @@ body {
 	color: rgba(0, 0, 0, 0.25);
 }
 
+/* ===== Middle_footer ===== */
 
-/* Слайдер bottom_slider */                                                             
+/* Слайдер bottom_slider (внутри) */                                                             
 
-.bottom_slider {
+.middle_footer {
 	width: 100%;
 	height: 288px;
 	background-color: #e5e5e5;
@@ -479,8 +481,11 @@ body {
 	margin: 0;
 }
 
+/* ===== Main ===== */
+    (продолжение)
 
-/* ===== Footer ===== */
+
+/* ===== Main_footer ===== */
 
 .main_footer {
 	width: 100%;
