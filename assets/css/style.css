@@ -79,6 +79,10 @@ body {
 .search_nav,
 .main_nav,
 .title_content,
+.bottom_slider,
+.partners,
+.wrapper,
+.footer_nav,
 .address,
 .social_networks {
 	width: 1160px;
@@ -154,6 +158,29 @@ body {
 .search_nav a:active,
 .search_nav a:focus {
 	color: rgba(0, 0, 0, 0.25);
+}
+
+/* позиционирование */
+
+.search_nav .search_container {
+ 	float: left;
+ 	width: 240px;
+}
+
+.search_nav li:not(.search_container) {
+	float: right;
+	width: 100px;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.search_nav ul {
+	margin: 0;
+	padding: 0;
 }
 
 /* Главная навигация */
@@ -390,12 +417,15 @@ body {
 }
 
 
-/* Слайдер bottom_slider */                                                             
+/* Слайдер bottom_slider */ 
+.middle_footer {
+	width: 100%;
+	background-color: #e5e5e5;
+}                                                            
 
 .bottom_slider {
-	width: 100%;
 	height: 288px;
-	background-color: #e5e5e5;
+	
 }
 
 .delivery {
