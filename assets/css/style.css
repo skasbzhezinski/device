@@ -15,11 +15,6 @@ li {
 	list-style: none;
 }
 
-button {
-	margin: 0;
-	padding: 0;
-}
-
 /* Обводка в фокусе */
 
 * {
@@ -64,6 +59,7 @@ body {
 /* ===== Header ===== */
 
 .main_header {
+	width: 100%;
 	height: 299px;
 	background-color: #f7e296;
 	margin-top: 40px;
@@ -79,14 +75,12 @@ body {
 }
 
 .header_logo,
-.main_header,
 .search,
 .search_nav,
 .main_nav,
 .title_content,
 .address,
-.social_networks,
-.bottom_slider {
+.social_networks {
 	width: 1160px;
     margin-left: auto;
     margin-right: auto;
@@ -162,15 +156,11 @@ body {
 	color: rgba(0, 0, 0, 0.25);
 }
 
-.search_nav li:hover a::before {
-	fill: ; /* ??? */										=====?
-}
-
 /* Главная навигация */
 
 .main_nav a {
 	font-family: Gilroy Extrabold;
-	font-size: 24px;
+	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: 0.2em;
 	color: rgba(0, 0, 0, 1);
@@ -223,7 +213,7 @@ body {
 
 .stylish_button {
 	font-family: Gilroy Extrabold;
-	font-size: 18px;
+	font-size: 24px;
 	line-height: 24px;
 	letter-spacing: 0.2em;
 	color: rgba(0, 0, 0, 1);
@@ -231,13 +221,8 @@ body {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	padding-left: 40px;
-	padding-right: 40px;
-
-	border: none;
-	box-shadow: none;
-	background-color: transparent; 
+	padding-right: 40px; 
 }
-
 
 /* переключатель слайдов */
 .slide_toggler li {
@@ -404,28 +389,13 @@ body {
 	color: rgba(0, 0, 0, 0.25);
 }
 
-/* ===== Middle_footer ===== */
 
-/* Слайдер bottom_slider (внутри) */                                                             
+/* Слайдер bottom_slider */                                                             
 
-.middle_footer {
+.bottom_slider {
 	width: 100%;
 	height: 288px;
 	background-color: #e5e5e5;
-}
-
-/* картинки */
-
-.services_figure p {
-	width: 425px;
-}
-
-.services_figure li {
-	min-height: 160px;
-	width: 900px;
-	background-repeat: no-repeat;
-	background-position-x: 85%;
-	background-position-y: 10px;
 }
 
 .delivery {
@@ -434,46 +404,24 @@ body {
 	background-repeat: no-repeat;
 	background-position-x: 85%;
 	background-position-y: 10px; 
+
 }
 
-.warranty {
-	min-height: 160px;
-	background-image: url("../img/warranty.png");
-	background-repeat: no-repeat;
-	background-position-x: 85%;
-	background-position-y: 10px; 
-}
-
-.credit {
-	min-height: 160px;
-	background-image: url("../img/credit.png");
-	background-repeat: no-repeat;
-	background-position-x: 85%;
-	background-position-y: 10px; 
+.services .stylish_button {
+	background-color: transparent;
+	background-image: url("../img/stick.svg");
 }
 
 .services .stylish_button:hover {
 	background-color: #f0c52e;
 }
 
-.services .stick {
-	position: relative;
-	width: 160px;
-	height: 10px;
-	margin-bottom: 48px; 
-	background-color: #f0c52e;
+/* обнуляю дефолтные стили для кнопки */
+.stylish_button {
+	border: none;
+	box-shadow: none;
+	background-color: #fff;
 }
-
-.services .stylish_button {
-	position: absolute;
-	top: -20px;
-	left: -13px;
-}
-
-.services .credit_button {
-	left: -2px;
-}
-
 
 /* ...и для списка */
 .bottom_slider ul {
@@ -481,11 +429,8 @@ body {
 	margin: 0;
 }
 
-/* ===== Main ===== */
-    (продолжение)
 
-
-/* ===== Main_footer ===== */
+/* ===== Footer ===== */
 
 .main_footer {
 	width: 100%;
