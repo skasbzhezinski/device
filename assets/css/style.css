@@ -164,7 +164,7 @@ body {
 }
 
 .search_nav .cart {
-	margin-right: 20px;
+	margin-right: 25px;
 }
 
 /* поведение */
@@ -196,7 +196,7 @@ body {
 	margin-top: 8px;
 }
 
-.search_nav .clearfix::after {
+.clearfix::after {
 	content: "";
 	display: table;
 	clear: both;
@@ -226,7 +226,49 @@ body {
 	left: -14px;
 }
 
+.search_nav .to_enter {
+	margin-right: 146px;
+}
+
 /* Главная навигация */
+
+.main_nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.main_nav li {
+	position: relative;
+	margin: 0;
+	margin-top: 35px;
+}
+
+.main_nav li:not(:first-child) {
+	float: right;
+}
+
+.main_nav li:first-child {
+	float: left;
+	margin-left: 60px;
+}
+
+.main_nav li:nth-child(2) {
+	margin-right: 60px;
+	margin-left: 109px;
+}
+
+.main_nav li:nth-child(3) {
+	margin-left: 30px;
+}
+
+.main_nav li span {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/plus.png);
+	top: 7px;
+	left: 230px;
+}
 
 .main_nav a {
 	font-family: Gilroy Extrabold;
