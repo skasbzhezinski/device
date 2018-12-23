@@ -232,45 +232,38 @@ body {
 
 /* Главная навигация */
 
-.main_nav ul {
+.main_nav {
+	display: flex;
+	margin-top: 35px;
+	justify-content: space-between;
+}
+
+.main_nav .nav_wrap,
+.main_nav .catalog_wrap {
 	margin: 0;
 	padding: 0;
 }
 
-.main_nav li {
+.nav_wrap li {
 	position: relative;
-	margin: 0;
-	margin-top: 35px;
-}
-
-.main_nav li:not(:first-child) {
+	margin: 0;	
 	float: right;
 }
 
-.main_nav li:first-child {
-	float: left;
-	margin-left: 60px;
-}
-
-.main_nav li:nth-child(2) {
+.nav_wrap li:first-child {
 	margin-right: 60px;
-	margin-left: 109px;
 }
 
-.main_nav li:nth-child(3) {
-	margin-left: 30px;
+.nav_wrap li:nth-child(2) {
+	margin-right: 114px;
 }
 
-.main_nav li span {
-	position: absolute;
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/plus.png);
-	top: 7px;
-	left: 230px;
+.nav_wrap li:last-child {
+	margin-right: 36px;
 }
 
-.main_nav a {
+.catalog_wrap a,
+.nav_wrap a {
 	font-family: Gilroy Extrabold;
 	font-size: 18px;
 	line-height: 24px;
@@ -279,14 +272,88 @@ body {
 }
 
 /* поведение */
-.main_nav a:hover {
+.catalog_menu a:hover,
+.nav_wrap a:hover {
 	color: rgba(0, 0, 0, 0.5);
 }
 
-.main_nav a:active,
-.main_nav a:focus {
+.catalog_menu a:active,
+.catalog_menu a:focus,
+.nav_wrap a:active,
+.nav_wrap a:focus {
 	color: rgba(0, 0, 0, 0.25);
 }
+
+/* выпадающее меню */
+.main_nav .catalog_wrap {
+	position: relative;
+	margin-left: 60px;
+}
+
+.main_nav .catalog_menu a {
+	font-family: Open Sans, Light;
+	font-size: 15px;
+	line-height: 36px;
+	letter-spacing: normal;	
+}
+
+.main_nav .catalog_menu {
+	margin: 0;
+	padding: 0;
+} 
+
+.catalog_wrap span {
+	position: absolute;
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/plus.png);
+	background-repeat: no-repeat;
+	left: 230px;
+	bottom: 7px;
+}
+                                                      
+.catalog_wrap .catalog_menu {
+	display: none;
+}
+
+.catalog_wrap .catalog_menu a {
+	font-family: Open Sans, light;
+	font-size: 15px;
+	line-height: 36px;
+	width: 185px;
+}
+
+/* выпадание  catalog_menu */
+.catalog_wrap:hover > a + ul {
+	position: absolute;
+	display: flex;
+	justify-content: flex-start;
+	width: 560px;
+	min-height: 125px;
+
+	padding-top: 46px;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+}
+
+.catalog_wrap:hover > a {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.catalog_wrap:active > a,
+.catalog_wrap:focus > a {
+	color: rgba(0, 0, 0, 0.25);
+}
+
+.catalog_menu li {
+	display: flex;
+	flex-direction: column;
+	margin-right: 35px;
+	text-align: left;
+}
+
 
 /* ===== Main ===== */
 
