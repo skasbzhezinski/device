@@ -300,6 +300,7 @@ body {
 .main_nav .catalog_menu {
 	margin: 0;
 	padding: 0;
+	padding-bottom: 40px;
 } 
 
 .catalog_wrap span {
@@ -315,24 +316,35 @@ body {
                                                       
 .catalog_wrap .catalog_menu {
 	display: none;
+	background-color: #f7e296;
+	margin: 0;
+	margin-left: 0px;
+	padding-top: 16px;
+	padding-right: 0;
+	padding-bottom: 24px;
+	padding-left: 0px;
 }
 
 .catalog_wrap .catalog_menu a {
 	font-family: Open Sans, light;
 	font-size: 15px;
 	line-height: 36px;
-	width: 185px;
+	width: 177px;
 }
 
 /* выпадание  catalog_menu */
-.catalog_wrap:hover > a + ul {
+
+.catalog_wrap:hover > a + .catalog_menu {
 	position: absolute;
 	display: flex;
 	justify-content: flex-start;
-	width: 560px;
+	flex-wrap: wrap;
+	width: 1100px;
 	min-height: 125px;
 
-	padding-top: 46px;
+	margin-top: 25px;
+	margin-left: -60px;
+    padding-left: 60px;
 	top: 0px;
 	left: 0px;
 	z-index: 10;
@@ -359,22 +371,97 @@ body {
 
 /* Слайдер top_slider */
 
+.top_slider .slide {
+	display: flex;
+	justify-content: space-between;
+}
+
+.top_slider .right_column {
+	position: relative;
+	width: 560px;
+}
+
+.slide figure {
+	display: inline-block;
+	margin-top: -65px;
+}
+
 .top_slider .number {
+	display: inline-block;
 	font-family: Gilroy Extrabold;
-	font-size: 179.2px;
-	line-height: 179.2px;
+	font-size: 160px;
+	line-height: 56px;
 	color: #fff;
-	background-color: #f7e296; /* временно для видимости */
+	/*   background-color: #f7e296;  временно для видимости */
 }
 
 .top_slider h2 {
 	font-family: Gilroy Extrabold;
 	font-size: 47px;
-	line-height: 56px; 
+	line-height: 56px;
+	margin: 0;
+	padding: 0;
+	margin-top: -70px;
+	margin-bottom: 40px; 
 }
 
 .top_slider p {
-	width: 480px;
+	width: 450px;
+	margin-top: 18px;
+	margin-bottom: 32px;
+}
+
+/* слайд 1 */
+.slide_1 .number {
+	margin-left: 45px;
+}
+
+.slide_1 figure {
+	margin-left: 88px;
+}
+
+/* слайд 2 */
+
+.slide_2 .number {
+	margin-left: 158px;
+}
+
+.slide_2 figure {
+	margin-left: 88px;
+}
+
+
+/* слайд 3 */
+.slide_3 figure {
+	margin-left: 31px;
+}
+
+.slide_3 h2 {
+	margin-top: -32px;
+}
+
+.slide_3 h2:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100px;
+	height: 7px;
+	background-color: #fff;
+	top: -55px;
+}
+
+.right_column .slide_toggler {
+	display: inline-block;
+	margin-left: 60px;
+}
+
+.right_column .read_more {
+	font-family: Gilroy ExtraBold;
+	font-size: 18px;
+	line-height: 24px;
+
+	padding-left: 45px;
+	padding-right: 45px;
 }
 
 .specifications td {
@@ -398,9 +485,7 @@ body {
 	color: rgba(0, 0, 0, 1);
 	
 	padding-top: 12px;
-	padding-bottom: 12px;
-	padding-left: 40px;
-	padding-right: 40px; 
+	padding-bottom: 12px; 
 }
 
 /* переключатель слайдов */
