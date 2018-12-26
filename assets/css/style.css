@@ -500,14 +500,14 @@ body {
 }
 
 .stylish_button {
-	font-family: Gilroy Extrabold;
-	font-size: 24px;
+	font-family: Gilroy ExtraBold;
+	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: 0.2em;
 	color: rgba(0, 0, 0, 1);
 	
-	padding-top: 12px;
-	padding-bottom: 12px; 
+	padding-top: 11px;
+	padding-bottom: 11px; 
 }
 
 /* переключатель слайдов */
@@ -691,6 +691,7 @@ body {
 
 .bottom_slider {
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	height: 288px;	
 }
@@ -699,22 +700,62 @@ body {
 	width: 430px;
 }
 
-.delivery {
-	min-height: 160px;
-	background-image: url("../img/delivery.png");
-	background-repeat: no-repeat;
-	background-position-x: 85%;
-	background-position-y: 10px; 
-
+.services_figure h2 {
+	font-family: Gilroy ExtraBold;
+	font-size: 47px;
+	line-height: 48px;
+	margin-top: -3px;
 }
 
-.services .stylish_button {
-	background-color: transparent;
-	background-image: url("../img/stick.svg");
+.services_figure li {
+	width: 700px;
+	min-height: 205px;
+	background-repeat: no-repeat;
+	margin-right: 80px;
+}
+
+.services_figure .delivery {
+	background-image: url("../img/delivery.png");
+	background-position-x: right;
+	background-position-y: 10px; 
+}
+
+.services_figure .warranty {
+	background-image: url("../img/warranty.png");
+	background-position-x: right;
+	background-position-y: 10px; 
+}
+
+.services_figure .credit {
+	background-image: url("../img/credit.png");
+	background-position-x: right;
+	background-position-y: 0; 
+}
+
+.services {
+	width: 280px;
+	margin-top: -25px;
+}
+
+.services:after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 280px;
+	top: -85px;
+
+	width: 7px;
+	height: 320px;
+	background-color: #000;
 }
 
 .services .stylish_button:hover {
 	background-color: #f0c52e;
+}
+
+.services .stylish_button {
+	background-color: transparent;
+	width: 160px;
 }
 
 /* обнуляю дефолтные стили для кнопки */
@@ -728,6 +769,7 @@ body {
 .bottom_slider ul {
 	padding: 0;
 	margin: 0;
+	margin-top: -25px;
 }
 
 
