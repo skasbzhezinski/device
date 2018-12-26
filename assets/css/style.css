@@ -476,12 +476,14 @@ body {
 }
 
 .right_column .read_more {
+	position: relative;
 	font-family: Gilroy ExtraBold;
 	font-size: 18px;
 	line-height: 24px;
 
 	padding-left: 45px;
 	padding-right: 45px;
+	background-color: transparent;
 }
 
 .specifications td {
@@ -505,9 +507,40 @@ body {
 	line-height: 24px;
 	letter-spacing: 0.2em;
 	color: rgba(0, 0, 0, 1);
-	
-	padding-top: 11px;
-	padding-bottom: 11px; 
+
+	/* обнуляю дефолтные стили для кнопки */
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+
+	padding-top: 8px;
+	padding-bottom: 8px; 
+}
+
+/* поведение */
+
+.stylish_button:hover {
+	background-color: #f0c52e;
+}
+
+.stylish_button:active,
+.stylish_button:focus {
+	background-color: #f0c52e;
+	color: rgba(0, 0, 0, 0.25);
+}
+
+/* прикручиваю внутреннюю полоску через псевдо элемент */
+
+.slide .stylish_button:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 220px;
+	height: 7px;
+	left: 0;
+	bottom: 15px;
+	background-color: #f0c52e;
+	z-index: -1;
 }
 
 /* переключатель слайдов */
@@ -521,7 +554,7 @@ body {
 	margin-right: 22px; 
 }
 
-.slide .active::before {
+.slide .active_top_slide::before {
 	position: absolute;
 	left: 2px;
 	top: 2px;
@@ -553,17 +586,7 @@ body {
 
 
 
-/* поведение */
 
-.stylish_button:hover {
-	background-color: #f0c52e;
-}
-
-.stylish_button:active,
-.stylish_button:focus {
-	background-color: #f0c52e;
-	color: rgba(0, 0, 0, 0.25);
-}
 
 
 /* Блок с иконками prodacts */
@@ -693,25 +716,25 @@ body {
 	display: flex;
 	position: relative;
 	justify-content: space-between;
-	height: 288px;	
-}
-
-.services_figure p {
-	width: 430px;
+	min-height: 288px;	
 }
 
 .services_figure h2 {
 	font-family: Gilroy ExtraBold;
 	font-size: 47px;
 	line-height: 48px;
-	margin-top: -3px;
+	margin-top: -4px;
 }
 
 .services_figure li {
-	width: 700px;
+	width: 674px;
 	min-height: 205px;
 	background-repeat: no-repeat;
 	margin-right: 80px;
+}
+
+.services_figure p {
+	width: 430px;
 }
 
 .services_figure .delivery {
@@ -733,8 +756,16 @@ body {
 }
 
 .services {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+
 	width: 280px;
 	margin-top: -25px;
+}
+
+.services_item {
+	margin-bottom: 20px;
 }
 
 .services:after {
@@ -754,24 +785,60 @@ body {
 }
 
 .services .stylish_button {
+	position: relative;
 	background-color: transparent;
 	width: 160px;
+	z-index: 10;
+	cursor: pointer;
 }
 
-/* обнуляю дефолтные стили для кнопки */
-.stylish_button {
-	border: none;
-	box-shadow: none;
-	background-color: #fff;
+/* прикручиваю внутреннюю полоску через псевдо элемент */
+
+.services .stylish_button:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 160px;
+	height: 7px;
+	left: 0;
+	top: 16px;
+	background-color: #f0c52e;
+	z-index: -1;
 }
 
 /* ...и для списка */
 .bottom_slider ul {
 	padding: 0;
 	margin: 0;
-	margin-top: -25px;
+	margin-top: -22px;
 }
 
+.bottom_slider .bottom_slider_active {
+	background-color: #000;
+	color: #f7e184;	
+}
+
+/* это какой-то трэш и угар! */
+.services .bottom_slider_active.stylish_button:before {
+	display: none;
+}
+
+/* прибиваю справа еще кусок черноты */
+.services .bottom_slider_active.stylish_button:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 120px;
+	height: 40px;
+	background-color: #000;
+	left: 160px;
+	top: 0px;
+}
+
+.services .stylish_button:hover.bottom_slider_active {
+	background-color: #000;
+	color: #f7e184;
+}
 
 /* ===== Footer ===== */
 
