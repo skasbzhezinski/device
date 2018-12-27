@@ -551,7 +551,8 @@ body {
 	height: 12px;
 	border: 1px solid #000;
 	border-radius: 50%;
-	margin-right: 22px; 
+	margin-right: 22px;
+	cursor: pointer; 
 }
 
 .slide .active_top_slide::before {
@@ -838,6 +839,51 @@ body {
 .services .stylish_button:hover.bottom_slider_active {
 	background-color: #000;
 	color: #f7e184;
+}
+
+/* Секция логотипов partners */
+.partners ul {
+	display: flex;
+	justify-content: space-between;
+	/*margin-right: auto;
+	margin-left: auto;*/
+}
+
+.middle_footer {
+	margin-bottom: 94px;
+}
+
+.partners {
+	margin-bottom: 108px;
+}
+
+.partners li {
+	width: 260px;
+	height: 100px;
+}
+
+.partners li:last-child:focus,
+.partners li:last-child:hover {
+	background-image: url(../img/logo-vive-color.png);  
+	background-repeat: no-repeat;
+}
+
+.partners li:nth-child(3):focus,
+.partners li:nth-child(3):hover {
+	background-image: url(../img/logo-go_pro-color.png);  
+	background-repeat: no-repeat;
+}
+
+.partners li:nth-child(2):focus,
+.partners li:nth-child(2):hover {
+	background-image: url(../img/logo-sp_gadgets-color.png);  
+	background-repeat: no-repeat;
+}
+
+.partners li:first-child:focus,
+.partners li:first-child:hover {
+	background-image: url(../img/logo-dji-color.png);  
+	background-repeat: no-repeat;
 }
 
 /* ===== Footer ===== */
