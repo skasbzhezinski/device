@@ -1010,11 +1010,12 @@ body {
 	width: 100%;
 	min-height: 323px;
 	background-color: #464646;
+	margin-bottom: 10px;
 }
 
 .main_footer a,
 .main_footer li {
-	color: #fff;
+	color: rgba(255, 255, 255, 1);
 }
 
 .main_footer .top_wrapper {
@@ -1111,8 +1112,40 @@ body {
 
 /* поведение */
 
+.footer_search_nav li:last-child:hover a::before {
+	background-image: url(../img/cart_h.png);
+}
+
+.footer_search_nav li:first-child:hover a::before {
+	background-image: url(../img/user_h.png);
+}
+
+.footer_search_nav li:nth-child(2):hover a::before {
+	background-image: url(../img/compare_h.png);
+}
+
+.footer_search_nav li:last-child:focus a::before,
+.footer_search_nav li:last-child:active a::before {
+	background-image: url(../img/cart_a.png);
+}
+
+.footer_search_nav li:first-child:focus a::before,
+.footer_search_nav li:first-child:active a::before {
+	background-image: url(../img/user_a.png);
+}
+
+.footer_search_nav li:nth-child(2):focus a::before,
+.footer_search_nav li:nth-child(2):active a::before {
+	background-image: url(../img/compare_a.png);
+}
+
 .footer_search_nav a:hover {
 	color: rgba(255, 255, 255, 1);
+}
+
+.footer_search_nav a:active,
+.footer_search_nav a:focus {
+	color: rgba(255, 255, 255, 0.4);
 }
 
 /* middle_wrapper */
@@ -1158,6 +1191,17 @@ body {
 	letter-spacing: 0.2em;
 }
 
+/* поведение */
+
+.footer_nav li:hover a {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.footer_nav li:focus a,
+.footer_nav li:active a {
+	color: rgba(255, 255, 255, 0.2);
+}
+
 /* bottom_wrapper */
 
 .bottom_wrapper {
@@ -1196,4 +1240,60 @@ body {
 
 .social_networks li {
 	margin: 0 12px 0 12px;
+}
+
+.social_networks a {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat; 
+}
+
+.social_networks li:first-child {
+	background-image: url(../img/facebook.png);
+	background-position: center;
+}
+
+.social_networks li:nth-child(2) {
+	background-image: url(../img/instagram.png);
+	background-position: center;
+}
+
+.social_networks li:last-child {
+	background-image: url(../img/twitter.png);
+	background-position: center;
+}
+
+/* поведение */
+.social_networks li:first-child:hover {
+	background-image: url(../img/facebook_h.png);
+	background-position: center;
+}
+
+.social_networks li:nth-child(2):hover {
+	background-image: url(../img/instagram_h.png);
+	background-position: center;
+}
+
+.social_networks li:last-child:hover {
+	background-image: url(../img/twitter_h.png);
+	background-position: center;
+}
+
+.social_networks li:first-child:focus,
+.social_networks li:first-child:active {
+	background-image: url(../img/facebook_a.png);
+	background-position: center;
+}
+
+.social_networks li:nth-child(2):focus,
+.social_networks li:nth-child(2):active {
+	background-image: url(../img/instagram_a.png);
+	background-position: center;
+}
+
+.social_networks li:last-child:focus,
+.social_networks li:last-child:active {
+	background-image: url(../img/twitter_a.png);
+	background-position: center;
 }
